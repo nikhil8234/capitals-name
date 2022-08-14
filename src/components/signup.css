@@ -1,0 +1,21 @@
+.signupform {
+    background: #c41a2a75;
+    padding: 90px 300px 90px 300px;
+}
+form {
+    background: white;
+    padding: 60px;
+    border-radius: 21px;
+}
+input {
+    width: 100%;
+    padding: 14px;
+}
+.signinput {
+    padding-bottom: 21px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+.submt-frm {
+    background: #557edd;
+}

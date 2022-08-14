@@ -1,0 +1,9 @@
+.navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: end;
+    background: cadetblue;
+}
+.navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: end !important;
+}
