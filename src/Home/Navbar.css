@@ -6,4 +6,8 @@
 .navbar-expand-lg {
     flex-wrap: nowrap;
     justify-content: end !important;
+}span.welcome.navbar-brand {
+    margin-right: 78%;
+}.homesection {
+    padding: 14px 64px;
 }

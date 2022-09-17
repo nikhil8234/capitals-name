@@ -1,30 +1,41 @@
-import { useEffect, useState } from "react";
-import Datacard from "./Datacard";
+import { useState } from "react";
+import "./Navbar.css"
 import Navbarhome from "./Navbarhome";
-import Searchbar from "./Searchbar";
-import { useNavigate } from "react-router-dom";
+
+
 
 const Home = ()=>{
-    let navigate = useNavigate();
+ 
     const[loginstatus,setloginstatus] = useState(sessionStorage.getItem("login"))
-
-    useEffect(() => {
-      if(loginstatus=== "false"){
-        navigate("../", { replace: true });
-      }
-        fetch("https://restcountries.com/v2/all")
-        .then(response => response.json())
-        .then(data => localStorage.setItem('apidata', JSON.stringify(data)))     
-      },[])
-    
+console.log(setloginstatus)
+    const[numberis,setnumberis]=useState("")
+    var n = numberis;
+    const fibonacci = n =>
+      Array.from({
+        length: n
+      }).reduce(
+        (acc, val, i) => acc.concat(i > 1 ? acc[i - 1] + acc[i - 2] : i), []
+      );
+      const data = fibonacci(n);
+  
     return(
        <>
        {loginstatus === "true" &&
        <>
        <Navbarhome/> 
        <div className="homesection">
-       <Searchbar/>
-       <Datacard/>
+      <h5>Enter Number to get Fibonacci Series:</h5>
+     <input type="number" onChange={(e)=>{setnumberis(e.target.value)}}></input>
+     {data.length >0?<h5>Fibonacci Series are:</h5>:null}
+   {data && data.map((res)=>(
+    <>
+    <div className="seriesare">
+    <ul style={{listStyle:"none"}}>
+      <li>{res}</li>
+    </ul>
+    </div>
+    </>
+   ))}
        </div>
        </>
        
