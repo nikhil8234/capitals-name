@@ -21,7 +21,7 @@ const[passworderror,setpassworderror] = useState(false);
           localStorage.setItem('Name', firstname+ ""+lastname);
           localStorage.setItem('email', emailenter);
           localStorage.setItem('password', password);
-          navigate("../home", { replace: true });
+          navigate("../login", { replace: true });
 
         }else{
           setpassworderror(true)
